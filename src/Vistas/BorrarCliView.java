@@ -31,9 +31,9 @@ public class BorrarCliView extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jbBorrar = new javax.swing.JButton();
+        jbSalir = new javax.swing.JButton();
+        jbBuscar = new javax.swing.JButton();
         jtTelefono = new javax.swing.JTextField();
         jtDni = new javax.swing.JTextField();
         jtApellido = new javax.swing.JTextField();
@@ -58,26 +58,26 @@ public class BorrarCliView extends javax.swing.JInternalFrame {
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel6.setText("Ciudad");
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jButton1.setText("Borrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbBorrar.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jbBorrar.setText("Borrar");
+        jbBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbBorrarActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jButton2.setText("Salir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jbSalir.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jbSalir.setText("Salir");
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jbSalirActionPerformed(evt);
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/search.png"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jbBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/search.png"))); // NOI18N
+        jbBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jbBuscarActionPerformed(evt);
             }
         });
 
@@ -100,9 +100,9 @@ public class BorrarCliView extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(jbBorrar)
                         .addGap(99, 99, 99)
-                        .addComponent(jButton2))
+                        .addComponent(jbSalir))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
@@ -120,7 +120,7 @@ public class BorrarCliView extends javax.swing.JInternalFrame {
                                     .addComponent(jtNombre)
                                     .addComponent(jtCiudad))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(112, 112, 112)
                                 .addComponent(jLabel1)))
@@ -153,49 +153,47 @@ public class BorrarCliView extends javax.swing.JInternalFrame {
                 .addGap(0, 48, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(jButton3)
+                .addComponent(jbBuscar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)))
+                    .addComponent(jbSalir)
+                    .addComponent(jbBorrar)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarActionPerformed
       
-          limpiarCampos();
-          
-          if(agenda.borrarCliente(Long.parseLong(jtTelefono.getText()))){
-                    
+          limpiarCampos();       
+       
+        if(agenda.borrarCliente(Long.parseLong(jtTelefono.getText()))){
               JOptionPane.showMessageDialog(this,"Teléfono borrado con éxito");
           }else{
-              JOptionPane.showMessageDialog(this,"Número telefónico no registrado");
+              JOptionPane.showMessageDialog(this,"Datos ingresados inválidos");
           }
-        //codigo de borrado
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbBorrarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
       
         dispose();
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jbSalirActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
        
-            Cliente cli=agenda.buscarCliente(Long.parseLong(jtTelefono.getText()));
-       if(cli.getApellido()==null){
-           JOptionPane.showMessageDialog(this,"Número telefónico no encontrado");
-       }else{
-           jtDni.setText(cli.getDni().toString());
-           jtApellido.setText(cli.getApellido());
-           jtNombre.setText(cli.getNombre());
-           jtCiudad.setText(cli.getCiudad());          
-           
-       }
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
+           Cliente cli = agenda.buscarCliente(Long.parseLong(jtTelefono.getText()));
+                   
+        if (agenda.buscarCliente(Long.parseLong(jtTelefono.getText()))==null){         
+            JOptionPane.showMessageDialog(this,"Número telefónico no encontrado"); 
+         
+        } else {
+            jtDni.setText(cli.getDni()+"");
+            jtApellido.setText(cli.getApellido());
+            jtNombre.setText(cli.getNombre());
+            jtCiudad.setText(cli.getCiudad());  
+        }
+    }//GEN-LAST:event_jbBuscarActionPerformed
 
 
     private void limpiarCampos(){
@@ -208,15 +206,15 @@ public class BorrarCliView extends javax.swing.JInternalFrame {
 }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton jbBorrar;
+    private javax.swing.JButton jbBuscar;
+    private javax.swing.JButton jbSalir;
     private javax.swing.JTextField jtApellido;
     private javax.swing.JTextField jtCiudad;
     private javax.swing.JTextField jtDni;

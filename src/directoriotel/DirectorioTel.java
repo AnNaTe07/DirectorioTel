@@ -9,9 +9,9 @@ public class DirectorioTel {
     public static void main(String[] args) {
       
      Directorio dire=new Directorio();
-        Cliente francisco=new Cliente(43953752L, "Francisco", "Cordoba", "San Luis", "Naciones Unidas 1742");
-        Cliente luis=new Cliente(26083817L, "Luis", "Brandoni",  "Villa Mercedes", "retamo");
-        Cliente diego=new Cliente(48905670L, "Diego", "Orellano", "New York", "Washingtong 400");
+        Cliente francisco=new Cliente(43953752, "Francisco", "Cordoba", "San Luis", "Naciones Unidas 1742");
+        Cliente luis=new Cliente(26083817, "Luis", "Brandoni",  "Villa Mercedes", "retamo");
+        Cliente diego=new Cliente(48905670, "Diego", "Orellano", "New York", "Washingtong 400");
         
         dire.agregarCliente(francisco, 10);
         dire.agregarCliente(luis, 11);

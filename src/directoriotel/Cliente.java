@@ -4,7 +4,7 @@ package directoriotel;
 
 public class Cliente {
 
-    private Long dni;
+    private long dni;
     private String nombre;
     private String apellido;
     private String ciudad;
@@ -12,17 +12,17 @@ public class Cliente {
 
     public Cliente() {
     }
-    public Cliente(Long dni, String nombre, String apellido, String ciudad, String direccion) {
+    public Cliente(long dni, String nombre, String apellido, String ciudad, String direccion) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.ciudad = ciudad;
         this.direccion = direccion;
     }
-    public Long getDni() {
+    public long getDni() {
         return dni;
     }
-    public void setDni(Long dni) {
+    public void setDni(long dni) {
         this.dni = dni;
     }
     public String getNombre() {

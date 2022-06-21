@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Vistas;
 
 import directoriotel.Cliente;
@@ -172,7 +168,7 @@ public class AgregarClienteView extends javax.swing.JInternalFrame {
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
        
      
-     Long dni=Long.parseLong(jtdni.getText());                               
+     long dni=Long.parseLong(jtdni.getText());                               
      String nombre=jtnombre.getText();
      String apellido=jtapellido.getText();
      String ciudad=jtciudad.getText();

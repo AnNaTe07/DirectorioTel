@@ -17,8 +17,8 @@ public class Directorio {
         return true;
     }
 
-    public Cliente buscarCliente(Long phone) {
-        Cliente cliente = new Cliente();
+    public Cliente buscarCliente(long phone) {
+        Cliente cliente = null;
 
         for (Map.Entry<Long, Cliente> aux : agenda.entrySet()) {
             if (aux.getKey() == phone) {
@@ -55,7 +55,7 @@ public class Directorio {
         return clientes;
     }
 
-    public boolean borrarCliente(Long telefono) {
+    public boolean borrarCliente(long telefono) {
 
         if (agenda.containsKey(telefono)) {
 
@@ -64,6 +64,5 @@ public class Directorio {
         }
         return false;
     }
- //return agenda.remove(tel) != null;
-
+         //return agenda.remove(telefono) != null;
 }
