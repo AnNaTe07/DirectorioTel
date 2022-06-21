@@ -165,13 +165,15 @@ public class BorrarCliView extends javax.swing.JInternalFrame {
 
     private void jbBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarActionPerformed
       
-          limpiarCampos();       
+              
        
         if(agenda.borrarCliente(Long.parseLong(jtTelefono.getText()))){
               JOptionPane.showMessageDialog(this,"Teléfono borrado con éxito");
           }else{
               JOptionPane.showMessageDialog(this,"Datos ingresados inválidos");
           }
+        
+         limpiarCampos();  
     }//GEN-LAST:event_jbBorrarActionPerformed
 
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed

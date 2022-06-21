@@ -61,8 +61,9 @@ public class Directorio {
 
             agenda.remove(telefono);
             return true;
+        }else{ 
+            return false;
         }
-        return false;
     }
          //return agenda.remove(telefono) != null;
 }
